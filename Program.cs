@@ -1,21 +1,28 @@
 ﻿using SecondProject.Models;
 
-Company company = new Company();
-Company company2 = new Company("Tapal","ABC 123",22);
-TechCompany techCompany = new TechCompany();
-techCompany.MainProduct = "abc";
-techCompany.Budget = 500000;
-techCompany.CompanyName = "Gerrys Visa";
-//techCompany.NumberOfEmployee = 25;
-techCompany.CompanyAddress = "abc 123";
-//company.CompanyName = "Gerrys Visa";
-//Console.WriteLine(company.CompanyName);
-//company.Work();
-//company.SetCompanyName(3);
-company.Setnumberofemployee(11);
-Console.WriteLine(company.CompanyRavenue());
-//Console.WriteLine(techCompany.CompanyRavenue());
-//company.CompanyInfo();
-//techCompany.CompanyInfo();
-//company2.CompanyInfo();
-Console.ReadLine();
+string? a;
+do
+{
+    Console.WriteLine("enter a number");
+    a = Console.ReadLine();
+    //I am going to check whether the input is null, number or string.
+    int n;
+    bool isNumeric = int.TryParse(a, out n);
+    if (a == null || a == string.Empty)
+    {
+        Console.WriteLine("this value is null or empty");
+    }
+    else if (isNumeric)
+    {
+        Console.WriteLine("this is a number");
+        if (FindEvenNumber.evenNumber(n))
+        {
+            Console.WriteLine("this is even number");
+        }
+    }
+    else if (a != null && a.ToLower() != "break")
+    {
+        Console.WriteLine("this is string");
+    }
+
+} while (a.ToLower() != "break");
