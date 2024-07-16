@@ -1,6 +1,13 @@
 ﻿using SecondProject.Models;
 
-Accounts accounts = new Accounts(12, "Max", "Salary Account" );
-Console.WriteLine(accounts.DepositeCash(3333));
-Console.WriteLine(accounts.WithdrawalCash(3000));
-Console.WriteLine(accounts.BalanceInquiry());
+Car car = new Car();
+Honda honda = new Honda();
+car.companyName = "Merdedes";
+car.model = 2024;
+car.carColor = "Silver black";
+car.CarStart();
+car.CarStop();
+honda.companyName = "Honda";
+honda.carColor = "Black";
+honda.model = 2023;
+honda.NewModel();

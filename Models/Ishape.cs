@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace SecondProject.Models
 {
-    internal interface Ishape
+    internal interface IShape
     {
-        double getArea();
+        double GetArea();
     }
-    class Circle : Ishape
+    class Circle : IShape
     {
         private double _radius;
         public Circle(double radius)
         {
             _radius = radius;
         }
-        public double getArea() {
+        public double GetArea() {
         return Math.PI * _radius * _radius;
         }
     }
-    class Rectangle : Ishape {
+    class Rectangle : IShape {
         double _height;
         double _width;
         public Rectangle(double length, double width) {
             _height = length;
             _width = width;
         }
-        public double getArea() { return _width * _height; }
+        public double GetArea() { return _width * _height; }
 
     }
 }
