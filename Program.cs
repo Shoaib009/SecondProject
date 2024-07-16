@@ -11,3 +11,4 @@ honda.companyName = "Honda";
 honda.carColor = "Black";
 honda.model = 2023;
 honda.NewModel();
+Console.ReadLine();
