@@ -8,6 +8,5 @@ namespace SecondProject.Models
 {
     internal class Array
     {
-        int[] numbers = new int[10];
     }
 }

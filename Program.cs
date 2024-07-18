@@ -1,18 +1,42 @@
-﻿using SecondProject.Models;
+﻿//string[] names = new string[] { "Mac", "Alex", "Mosh", "Max" };
 
-IShape shape = new Circle(21);
-Circle circle = new Circle(22);
-shape.GetArea();
-Console.WriteLine(shape.GetArea());
-//Car car = new Car();
-//Honda honda = new Honda();
-//car.companyName = "Merdedes";
-//car.model = 2024;
-//car.carColor = "Silver black";
-//car.CarStart();
-//car.CarStop();
-//honda.companyName = "Honda";
-//honda.carColor = "Black";
-//honda.model = 2023;
-//honda.NewModel();
-//Console.ReadLine();
+//Console.WriteLine(names.Length);
+//Array.Sort(names);
+//Array.Reverse(names);   
+//foreach (string name in names)
+//{
+//    Console.WriteLine(name);
+//}
+/*
+int[] numbers;
+
+Console.WriteLine("write the size of array in number");
+int size = int.Parse(Console.ReadLine());
+numbers = new int[size];
+for (int i = 0; i < size; i++)
+{
+    Console.WriteLine("enter the elements");
+    numbers[i] = Convert.ToInt32(Console.ReadLine());
+}
+for (int i = 0;i < size; i++)
+{
+    Console.WriteLine(numbers[i]+"/n");
+}*/
+string[] names;
+Console.WriteLine("enter the size of the array:");
+int size = int.Parse(Console.ReadLine());
+
+names = new string[size];
+
+for (int i = 0; i < size; i++)
+{
+    Console.WriteLine("write the name: ");
+    names[i] = Console.ReadLine();
+}
+Console.WriteLine("\nbelow are the given names:");
+Array.Reverse(names);
+
+for (int i = 0;i < size; i++)
+{
+    Console.WriteLine(names[i]);
+}
