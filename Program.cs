@@ -1,16 +1,21 @@
-﻿using System;
+﻿using SecondProject.Model;
+using System;
 using System.Collections.Generic;
 
-List<int> number = new List<int> { 1, 2, 3 };
-number.Add(123);
-foreach (int i in number)
+List<string> number = new List<string>();
+do
 {
-    Console.WriteLine(i);
-}
-number.RemoveAt(3);
-number.Add(11);
-Console.WriteLine("\n");
-for (int i = 0; i < number.Count; i++)
+    Student student = new Student();    
+    Console.WriteLine("enter student name: ");
+    student.studName = Console.ReadLine();
+    number.Add(student.studName);   
+
+} while (number.Count <= 5);
+
+number.Sort();
+number.TrimExcess();
+
+foreach (string item in number)
 {
-    Console.WriteLine(number[i]);
+    Console.WriteLine(item);
 }
