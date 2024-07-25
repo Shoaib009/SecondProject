@@ -2,20 +2,22 @@
 using System;
 using System.Collections.Generic;
 
-List<string> number = new List<string>();
+List<Student> names = new List<Student>();
+
 do
 {
-    Student student = new Student();    
+    Student student = new Student();
     Console.WriteLine("enter student name: ");
     student.studName = Console.ReadLine();
-    number.Add(student.studName);   
+    Console.WriteLine("enter student ID: ");
+    student.studId = Convert.ToInt32(Console.ReadLine());
+    names.Add(student);
+} while (names.Count < 3);
 
-} while (number.Count <= 5);
+//names.Sort();
+names.TrimExcess();
 
-number.Sort();
-number.TrimExcess();
-
-foreach (string item in number)
+foreach (Student item in names)
 {
-    Console.WriteLine(item);
+    item.StudentInfo();
 }

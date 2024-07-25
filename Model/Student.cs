@@ -9,10 +9,11 @@ namespace SecondProject.Model
     internal class Student
     {
         public string studName { get; set; }
+        public int studId { get; set; }
 
         public void StudentInfo()
         {
-            Console.WriteLine($"Student Name: {studName}");
+            Console.WriteLine($"Student ID{studId}/nStudent Name: {studName}");
         }
     }
 }
