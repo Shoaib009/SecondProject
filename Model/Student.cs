@@ -13,7 +13,7 @@ namespace SecondProject.Model
 
         public void StudentInfo()
         {
-            Console.WriteLine($"Student ID{studId}/nStudent Name: {studName}");
+            Console.WriteLine($"Student ID: {studId}\nStudent Name: {studName}");
         }
     }
 }
