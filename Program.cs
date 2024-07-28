@@ -7,6 +7,9 @@ List<int> studentId = new List<int>();
 List<string> studentName = new List<string>();
 string nameCheck;
 int idCheck;
+int acendingOrDecendingOrderId;
+string acendingOrDecendingName;
+
 
 do
 {
@@ -22,20 +25,62 @@ foreach (var items in names)
 {
     studentId.Add(items.studId);
 }
-studentId.Sort();
-foreach (var item in studentId) { 
-Console.WriteLine($"student id is {item}.");
-}
+
+do
+{
+    Console.WriteLine("Please select one number to sort student ID list accordingly \nPress 1 for Acendending Order of list:\nPress 2 for Decending order of list:");
+    acendingOrDecendingOrderId = Convert.ToInt32(Console.ReadLine());
+    if (acendingOrDecendingOrderId == 1)
+    {
+        studentId.Sort();
+        foreach (var item in studentId)
+        {
+            Console.WriteLine($"student id is {item}.");
+        }
+    }
+    else if (acendingOrDecendingOrderId == 2)
+    {
+        studentId.Reverse();
+        foreach (var item in studentId)
+        {
+            Console.WriteLine($"student id is {item}.");
+        }
+    }
+    else { Console.WriteLine("Please select the right number and try again"); }
+} while (!(acendingOrDecendingOrderId == 1 || acendingOrDecendingOrderId == 2));
+
+
 foreach (var item in names)
 {
     studentName.Add(item.studName);
 }
-studentName.Sort();
-foreach (var item in studentName)
+do
 {
+    Console.WriteLine("Please select a number to sort student name list accordingly \nPress 1 for Acending Order of list:\nPress 2 for Decending Order of list:");
+    acendingOrDecendingOrderId = Convert.ToInt32(Console.ReadLine());
+    if (acendingOrDecendingOrderId == 1)
+    {
+        studentName.Sort();
+        foreach (var item in studentName)
+        {
 
-Console.WriteLine($"student name is {item}.");
-}
+            Console.WriteLine($"student name is {item}.");
+        }
+    }
+    else if (acendingOrDecendingOrderId == 2)
+    {
+        studentName.Reverse();
+        foreach (var item in studentName)
+        {
+
+            Console.WriteLine($"student name is {item}.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Please select the right number and try again.");
+    }
+} while (!(acendingOrDecendingOrderId == 1 || acendingOrDecendingOrderId == 2));
 
 do
 {
